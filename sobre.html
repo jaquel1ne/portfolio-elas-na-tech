@@ -27,7 +27,7 @@
                         <h2 class="sobre">Sobre Mim</h2>
                         <p>Licenciada em Matemática pela UNEAL (Universidade Estadual de Alagoas), atuei por mais de 20 anos nas áreas
                             administrativa e financeira. Durante esse período, acumulei experiência em diversas funções:
-                            contas a pagar, contas a receber, crédito, cobrança, compras, organização de documentos, entre outras..</p>
+                            contas a pagar, contas a receber, crédito, cobrança, compras, organização de documentos, entre outras...</p>
                         <p>Alternativamente, lecionei Matemática no nível fundamental e turmas do EJA.</p>
                         <p>Em 2022, movida por novos desafios, iniciei meus estudos em tecnologia. Participei de bootcamps e cursos
                            online, explorando desde a Lógica de Programação até diversas linguagens e ferramentas, como Python, PHP,
@@ -73,6 +73,34 @@
         </div>
     </div>
 
+    <!-- Seção de Contato/Formulário -->
+    <section class="container mt-5">
+        <h3>Contato</h3>
+        <div class="l-shape"></div>
+
+        <div class="card mt-3">
+            <div class="card-body">
+                <!-- O atributo "target" do formulário direciona o resultado da submissão para o iframe invisível "hidden_iframe" -->
+                <form method="post" id="contactForm" action="https://formspree.io/f/mjvqalzl" target="hidden_iframe">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Digite seu nome" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Digite sua mensagem" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-form btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <!-- IFrame invisível para "capturar" a resposta do Formspree -->
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    </section>
 
     <footer class="footer">
         <div class="footer-l-shape"></div>

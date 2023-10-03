@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
@@ -24,7 +25,7 @@
                 <div class="profile-section d-flex align-items-center">
                     <img src="./imagens/imgperfil1.jpg" alt="Imagem de perfil de Jaqueline">
                     <div class="introduction ml-3">
-                        <h2>Olá, meu nome é Jaqueline!</h2>
+                        <h2>Olá, meu nome é Jaqueline Maria da Silva!</h2>
                         <p class="lead">Profissional em transição de carreira, estudando Tecnologia desde 2022.</p>
                         <p>Aberta a oportunidades de emprego, projetos freelancers ou trabalho voluntário para
                         obter experiência em programação/desenvolvimento web.</p>
@@ -162,6 +163,36 @@
             </div>
         </div>
     </section>
+
+    <!-- Seção de Contato/Formulário -->
+    <section class="container mt-5">
+        <h3>Contato</h3>
+        <div class="l-shape"></div>
+
+        <div class="card mt-3">
+            <div class="card-body">
+                <!-- O atributo "target" do formulário direciona o resultado da submissão para o iframe invisível "hidden_iframe" -->
+                <form method="post" id="contactForm" action="https://formspree.io/f/mjvqalzl" target="hidden_iframe">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Digite seu nome" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Digite sua mensagem" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-form btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <!-- IFrame invisível para "capturar" a resposta do Formspree -->
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    </section>
+
 
     <footer class="footer">
         <div class="footer-l-shape"></div>

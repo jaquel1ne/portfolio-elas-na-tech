@@ -6,9 +6,13 @@ $(window).scroll(function() {
     }
 });
 
-$('#back-to-top').click(function() {
-    $('body,html').animate({
-        scrollTop: 0
-    }, 800);
-    return false;
+$(document).ready(function() {
+    $('#contactForm').on('submit', function(e) {
+        // Define um tempo de espera após a submissão
+        setTimeout(function() {
+            window.location.href = './agradecimento.html';
+        }, 500); // espera meio segundo antes de redirecionar
+    });
 });
+
+
